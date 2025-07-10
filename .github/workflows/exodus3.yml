@@ -35,6 +35,7 @@ jobs:
                 docker run -t -p 10010-10100 ${{ secrets.IMAGE }} bash -c "
                 PORT=${{ matrix.Port }} CLIENT_KEY=$C_KEY timeout 300m node server.js
                 "
+                echo $?
             shell: bash
 
   check-job:
